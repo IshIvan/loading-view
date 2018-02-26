@@ -7,12 +7,13 @@ export class Loading extends Component {
         return (
             <div className="LoadingView">
                 <Spinner size={this.props.spinnerSize}/>
-                <div className="Text-Light">Не переживайте, скоро все пройдет!</div>
+                <div className="Text-Light">{this.props.children}</div>
             </div>
         );
     }
 }
 
 Loading.defaultProps = {
-    spinnerSize: 'small'
+    spinnerSize: 'small',
+    children: 'Не переживайте, скоро все пройдет!'
 };
